@@ -1,4 +1,4 @@
-node {
+node('dind-node') {
     def app
 
     stage('Clone repository') {
@@ -9,7 +9,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("getintodevops/hellonode")
+        app = docker.build("monpueng/hellonode")
     }
 
     stage('Test image') {
