@@ -1,4 +1,4 @@
-node('dind-node') {
+node {
     def app
 
     stage('Clone repository') {
