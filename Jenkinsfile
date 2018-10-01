@@ -31,4 +31,12 @@ node {
             app.push("latest")
         }
     }
+
+    stage('List pods') {
+        withKubeConfig([serverUrl: 'https://192.168.10.86:8443',
+                        contextName: 'minikube'
+                        ]) {
+          sh 'kubectl get pods'
+        }
+    }
 }
