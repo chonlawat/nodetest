@@ -34,7 +34,7 @@ node {
 
     stage('List pods') {
         withKubeConfig([credentialsId: 'jenkins-deployer-credential',
-                        serverUrl: 'https://172.27.10.209:8443',
+                        serverUrl: 'https://10.96.0.1:443',
                         contextName: 'minikube'
                         ]) {
           sh 'kubectl get pods'
