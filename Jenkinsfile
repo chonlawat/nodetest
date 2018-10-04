@@ -36,7 +36,7 @@ node {
         withKubeConfig([credentialsId: 'jenkins-deployer-credential',
                         serverUrl: 'https://172.27.10.209:6445'
                         ]) {
-          sh 'kubectl get pods'
+          sh 'kubectl create -f deployment.yml'
         }
     }
 }
