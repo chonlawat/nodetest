@@ -32,7 +32,7 @@ node {
         }
     }
 
-    stage('List pods') {
+    stage('Deploy') {
         withKubeConfig([credentialsId: 'jenkins-deployer-credential',
                         serverUrl: 'https://172.27.10.209:6445'
                         ]) {
