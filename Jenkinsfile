@@ -37,6 +37,7 @@ node {
                         serverUrl: 'https://172.27.10.209:6445'
                         ]) {
           sh 'kubectl create -f deployment.yml'
+          sh 'kubectl expose deployment hello-node-deployment --type=LoadBalancer --name=hello-node'
         }
     }
 }
